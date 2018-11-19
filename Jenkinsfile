@@ -12,6 +12,7 @@ pipeline {
             steps {
 		 sh 'ant -f build.xml -v'
             }
+	}
           stage('Deploy') {
             steps {
                  archiveArtifacts artifacts: 'dist/rectangle-${BUILD_NUMBER}.jar'
