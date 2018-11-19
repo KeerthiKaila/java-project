@@ -1,6 +1,6 @@
 properties([pipelineTriggers([githubPush()])])
 pipeline {
-	agent {label 'aws'}
+	agent {label 'java-pipeline'}
 	stages {
 	stage('Unit Tests') {
 	    steps {
