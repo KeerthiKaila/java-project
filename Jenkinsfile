@@ -2,7 +2,7 @@ properties([pipelineTriggers([githubPush()])])
 pipeline {
 	agent {
     node {
-        label ''
+        label 'linux'
         customWorkspace 'workspace/java-pipeline'
     }
 }
