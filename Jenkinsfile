@@ -1,6 +1,11 @@
 properties([pipelineTriggers([githubPush()])])
 pipeline {
-	agent {label 'java-pipeline'}
+	agent {
+    node {
+        label ''
+        customWorkspace 'workspace/java-pipeline'
+    }
+}
 	stages {
 	stage('Unit Tests') {
 	    steps {
